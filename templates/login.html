@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>TinyMongo Blog</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+          <div class="span12">
+            <form class="form-horizontal" action='' method="POST">
+              <fieldset>
+                <div id="legend">
+                  <legend class="">Login</legend>
+                </div>
+                <div class="control-group">
+                  <!-- Username -->
+                  <label class="control-label"  for="username">Username</label>
+                  <div class="controls">
+                    <input type="text" id="username" name="username" placeholder="" class="input-xlarge">
+                  </div>
+                </div>
+                <div class="control-group">
+                  <!-- Password-->
+                  <label class="control-label" for="password">Password</label>
+                  <div class="controls">
+                    <input type="password" id="password" name="password" placeholder="" class="input-xlarge">
+                  </div>
+                </div>
+                <p></p>
+                <div class="control-group">
+                  <!-- Button -->
+                  <div class="controls">
+                    <button class="btn btn-success">Login</button>
+                  </div>
+                </div>
+                {% if status %}
+                <div class="control-group">
+                  <p style="color:red">{{status}}</p>
+                </div>
+                {% endif %}
+              </fieldset>
+            </form>
+          </div>
+        </div>
+    </div>
+    
+  </body>
+</html>
